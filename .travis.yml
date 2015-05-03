@@ -16,7 +16,9 @@ before_script:
   - adb shell input keyevent 82 &
 
 
-script: ./gradlew build
+script:
+- sudo chmod +x gradlew
+- ./gradlew build
 
 deploy:
   provider: s3
