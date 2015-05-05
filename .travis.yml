@@ -9,7 +9,7 @@ android:
     - build-tools-19.0.0
 
 before_script:
-  # Create and start emulator.....
+  # Create and start emulator......
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
   - adb wait-for-device
@@ -22,7 +22,7 @@ script:
 
 deploy:
   provider: s3
-  access_key_id: "AKIAJX46ZYUM44GBR2LQ"
-  secret_access_key: "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"
+  access_key_id: "AKIAJWXHSL4R2VBXZRLQ"
+  secret_access_key: "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"
   bucket: "larky"
   skip_cleanup: true
